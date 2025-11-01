@@ -32,7 +32,7 @@ dependencies {
     testRuntimeOnly 'org.junit.platform:junit-platform-launcher'
     developmentOnly 'org.springframework.boot:spring-devtools'
     runtimeOnly 'com.h2database:h2'
-    implementation 'org.springframework.boot:spring-boot-stater-data-jpa'
+    implementation 'org.springframework.boot:spring-boot-starter-data-jpa'
 }
 
 tasks.named('test') {
