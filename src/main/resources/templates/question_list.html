@@ -1,5 +1,7 @@
-<link rel="stylesheet" type="text/css" th:href="@{/bootstrap.min.css}">
-<div class="contaner my-3">
+<!-- <link rel="stylesheet" type="text/css" th:href="@{/bootstrap.min.css}"> -->
+<html lang="ko" xmlns:th="http://www.thymeleaf.org" xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout" layout:decorate="~{layout}">
+<!--<div class="contaner my-3">-->
+<div layout:fragment="content" class="container my-3">
     <table class="table">
         <thead class="table-dark">
         <tr>
@@ -20,5 +22,5 @@
         </tbody>
     </table>
 </div>
-
+</html>
 
