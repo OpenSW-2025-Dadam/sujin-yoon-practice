@@ -14,8 +14,9 @@ public class SecurityConfig {
     SecurityFilterChain filterChain(HttpSecurity http) throws Exception {
         http
                 .authorizeHttpRequests((authorizeHttpRequests) -> authorizeHttpRequests
-                        .requestMatchers("/**").permitAll()
-                );
+                        .requestMatchers("/**").permitAll())
+                .csrf((csrf) -> csrf
+                        .ignoringRequestMatchers("/h2-console/**"));
         return http.build();
     }
 }
