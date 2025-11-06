@@ -23,8 +23,11 @@ public class SecurityConfig {
                         .ignoringRequestMatchers("/h2-console/**"))
                 .headers((headers) -> headers
                 .addHeaderWriter(new XFrameOptionsHeaderWriter(
-                        XFrameOptionsHeaderWriter.XFrameOptionsMode.SAMEORIGIN
-                )));
+                        XFrameOptionsHeaderWriter.XFrameOptionsMode.SAMEORIGIN)))
+                .formLogin((formLogin) -> formLogin
+                        .loginPage("/user/login")
+                        .defaultSuccessUrl("/"))
+                ;
         return http.build();
     }
 
